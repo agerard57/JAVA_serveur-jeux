@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="640.0" style="-fx-background-color: #25221e;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerMenuClient">
+  <children>
+      <BorderPane prefHeight="605.0" prefWidth="659.0" styleClass="background">
+         <bottom>
+            <Label fx:id="lblGestionClients" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="60.0" prefWidth="544.0" style="&#10;" styleClass="lbl-bas" text="-- Le jeu des allumettes --" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS" wrapText="false" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <Line endX="79.58578491210938" scaleX="7.0" strokeType="OUTSIDE" styleClass="barre-menu" translateY="-30.0" />
+               </graphic>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Label>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="101.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="47.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="86.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="125.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="164.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="203.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="242.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="281.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="320.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="359.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="398.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="437.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="476.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="515.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="77.0" layoutX="554.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../medias/allumette.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="89.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="104.0" layoutY="51.0" mnemonicParsing="false" text="Prendre 1 allumette" />
+                  <Button layoutX="257.0" layoutY="51.0" mnemonicParsing="false" text="Prendre 2 allumettes" />
+                  <Button layoutX="414.0" layoutY="51.0" mnemonicParsing="false" text="Prendre 3 allumettes" />
+                  <Line endX="221.0" layoutX="320.0" layoutY="87.0" startX="-218.0" styleClass="barre-menu" />
+                  <Text fill="WHITE" layoutX="258.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl-about-titres" text="--- Au tour de  ---" />
+                  <Button layoutX="102.0" layoutY="11.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="438.0" text="Nouvelle partie" />
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+  </children>
+</VBox>

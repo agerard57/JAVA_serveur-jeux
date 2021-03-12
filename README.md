@@ -2,6 +2,11 @@
 Un serveur de jeux en Java
 ___
 
+## Changelog
+
+V.03.12.21:
+- Presque fin de l'interface
+
 V.03.12.00:
 - Début de l'interface
 - Mise en place de l'arborescence

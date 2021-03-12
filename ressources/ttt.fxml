@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="640.0" style="-fx-background-color: #25221e;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerMenuClient">
+  <children>
+      <BorderPane prefHeight="605.0" prefWidth="659.0" styleClass="background">
+         <bottom>
+            <Label fx:id="lblGestionClients" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="60.0" prefWidth="544.0" style="&#10;" styleClass="lbl-bas" text="-- Le jeu du Tic-Tac-Toe --" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS" wrapText="false" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <Line endX="79.58578491210938" scaleX="7.0" strokeType="OUTSIDE" styleClass="barre-menu" translateY="-30.0" />
+               </graphic>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Label>
+         </bottom>
+         <center>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="291.0" stroke="BLACK" strokeType="INSIDE" width="283.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+  </children>
+</VBox>

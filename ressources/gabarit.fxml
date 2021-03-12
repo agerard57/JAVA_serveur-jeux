@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="405.0" prefWidth="658.0" styleClass="background" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerGabarit">
+   <children>
+      <AnchorPane prefHeight="19.0" prefWidth="640.0" styleClass="barre-menu">
+         <children>
+            <Separator layoutY="27.0" prefHeight="0.0" prefWidth="658.0" styleClass="separateur-menu" />
+            <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="629.0" layoutY="4.0" onMouseClicked="#pageFermer" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../medias/quitter.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btnClose" fitHeight="30.0" fitWidth="25.0" layoutX="602.0" layoutY="4.0" onMouseClicked="#pageReduire" pickOnBounds="true" preserveRatio="true" styleClass="img-fermer">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="4.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../medias/maison.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="35.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../medias/param.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="MOVE" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane fx:id="apMenuPrincipal" minHeight="400.0" prefHeight="400.0" prefWidth="658.0" />
+   </children>
+   <stylesheets>
+      <URL value="@application.css" />
+   </stylesheets>
+</VBox>

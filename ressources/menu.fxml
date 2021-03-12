@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="400.0" minHeight="400.0" prefHeight="400.0" prefWidth="640.0" styleClass="background" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.ControlleurMenu">
+  <children>
+      <AnchorPane fx:id="apMenuPrincipal" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="0.0" prefWidth="658.0">
+               <bottom>
+                  <Label fx:id="lblMenu" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="60.0" prefWidth="544.0" styleClass="lbl-bas" text="Bienvenue dans notre serveur de Jeux !" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS" wrapText="false" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="24.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <graphic>
+                        <Line endX="79.58578491210938" scaleX="7.0" strokeType="OUTSIDE" styleClass="lignes" translateY="-30.0" />
+                     </graphic>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Label>
+               </bottom>
+               <center>
+                  <AnchorPane prefHeight="580.0" prefWidth="658.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="27.0" onMouseClicked="#pageJeuPendu" onMouseExited="#txtMenu" onMouseMoved="#txtPendu" prefHeight="290.0" prefWidth="219.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="104.0" fitWidth="122.0" layoutX="28.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" styleClass="img-pendu" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label layoutX="70.0" layoutY="240.0" styleClass="titre-cat" text="Le jeu du&#10;pendu" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="-8.0" endY="259.0" layoutX="226.0" layoutY="22.0" startX="-8.0" startY="10.0" styleClass="lignes" AnchorPane.bottomAnchor="33.5" AnchorPane.topAnchor="31.5" />
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="29.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../medias/pendu.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                        <AnchorPane layoutX="220.0" onMouseClicked="#pageJeuAllumettes" onMouseExited="#txtMenu" onMouseMoved="#txtAllumettes" prefHeight="285.0" prefWidth="219.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="104.0" fitWidth="122.0" layoutX="28.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" styleClass="img-allumettes" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label layoutX="70.0" layoutY="240.0" styleClass="titre-cat" text="Le jeu des&#10;allumettes" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="34.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../medias/allumettes.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                        <AnchorPane layoutX="439.0" onMouseClicked="#pageJeuTTT" onMouseExited="#txtMenu" onMouseMoved="#txtTTT" prefHeight="315.0" prefWidth="219.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="70.0" layoutY="240.0" styleClass="titre-cat" text="Le jeu du&#10;Tic-Tac-Toe" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="-8.0" endY="259.0" layoutX="9.0" layoutY="23.0" startX="-8.0" startY="10.0" styleClass="lignes" AnchorPane.bottomAnchor="32.5" AnchorPane.topAnchor="32.5" />
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="38.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../medias/ttt.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+  </children>
+   <stylesheets>
+      <URL value="@application.css" />
+   </stylesheets>
+</VBox>
