@@ -4,6 +4,11 @@ ___
 
 ## Changelog
 
+V.03.14.20:
+- Il ne reste juste que l'interface du TTT à faire
+- Début de réalisation du serveur
+- Gabarits crées
+
 V.03.12.21:
 - Presque fin de l'interface
 

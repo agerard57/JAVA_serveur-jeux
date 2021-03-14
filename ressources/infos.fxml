@@ -14,20 +14,41 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="405.0" styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSettings">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="405.0" styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurs.ControlleurInfos">
    <children>
       <TabPane prefHeight="350.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Mode de données">
+          <Tab text="Règles : pendu">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Separator prefHeight="3.0" prefWidth="405.0" styleClass="separateur-menu" />
+                        <Label layoutX="105.0" layoutY="14.0" styleClass="lbl-about-titres" text="~~Les règles du pendu : ~~" />
+                        <Label layoutX="15.0" layoutY="102.0" styleClass="lbl-about-titres" text="Parmi une liste de mots déjà inscrits dans le serveur,&#10;un sera choisi aléatoirement. Votre rôle, essayer&#10;de le deviner ! Pour cela, vous devrez sélectionner &#10;une lettre que vous pensez se trouver dans le mot&#10;pioché. Mais attention : au fur et à mesure que vous &#10;entrez des lettres qui n'y figurent pas, un pendu&#10;se dessine. Si le dessin se complète entièrement,&#10; c'est perdu !" textAlignment="CENTER" />
+                        <Line endX="100.0" layoutX="202.0" layoutY="66.0" startX="-100.0" styleClass="lignes" />
+                     </children></AnchorPane>
             </content>
           </Tab>
-            <Tab text="Thème">
+            <Tab text="Règles : allumettes">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Separator layoutX="-4.0" prefHeight="3.0" prefWidth="421.0" styleClass="separateur-menu" />
+                        <Label layoutX="63.0" layoutY="14.0" styleClass="lbl-about-titres" text="~~Les règles du jeu des allumettes : ~~" />
+                        <Line endX="100.0" layoutX="202.0" layoutY="66.0" startX="-100.0" styleClass="lignes" />
+                        <Label layoutX="26.0" layoutY="102.0" styleClass="lbl-about-titres" text="15 allumettes se présentent à vous. Votre but, &#10;faire prendre au bot la dernière. &#10;Comment s'y prendre ? C'est très simple, en usant&#10;de ruses et stratégies.&#10;&#10;Prenez garde, ne jouez pas trop avec le feu, ou&#10;c'est lui qui risque de jouer avec vous." textAlignment="CENTER" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Règles : tic-tac-toe ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Separator prefHeight="3.0" prefWidth="405.0" styleClass="separateur-menu" />
+                        <Label layoutX="91.0" layoutY="14.0" styleClass="lbl-about-titres" text="~~Les règles du tic-tac-toe : ~~" />
+                        <Line endX="100.0" layoutX="202.0" layoutY="66.0" startX="-100.0" styleClass="lignes" />
+                        <Label layoutX="46.0" layoutY="98.0" styleClass="lbl-about-titres" text="Une bataille en 1v1 requierant vision de jeu, &#10;inventivité, adaptation et courage.&#10;&#10;Deux objectifs:&#10;- faîtes une ligne &#10;- empêcher votre adversaire d'en faire une.&#10;&#10;" textAlignment="CENTER" />
                      </children>
                   </AnchorPane>
               </content>
@@ -55,11 +76,13 @@
                         <Label layoutX="74.0" layoutY="215.0" styleClass="lbl-desc" text="Lien GitHub" />
                         <Label layoutX="264.0" layoutY="215.0" styleClass="lbl-desc" text="Lien Trello" />
                         <Line endX="100.0" layoutX="203.0" layoutY="200.0" startX="-100.0" styleClass="lignes" />
-                        <Label layoutX="63.0" layoutY="120.0" styleClass="lbl-about-contenu" text="Version 5.71&#10;Date: 2020-10-02&#10;Version de Java: 11.0.1, Oracle Corporation" textAlignment="CENTER" textFill="WHITE" />
+                        <Label layoutX="63.0" layoutY="120.0" styleClass="lbl-about-contenu" text="Version 03.14.18&#10;Date: 2021-03-15&#10;Version de Java: 15.0.2, Oracle Corporation" textAlignment="CENTER" textFill="WHITE" />
                         <Separator prefHeight="3.0" prefWidth="405.0" styleClass="separateur-menu" />
-                        <Label layoutX="66.0" layoutY="35.0" styleClass="lbl-about-contenu" text="GERARD Alexandre - GIANGRECO Vincent" />
-                        <Label layoutX="69.0" layoutY="14.0" styleClass="lbl-about-titres" text="--- Logiciel de pulls moches fait par ---" />
+                        <Label layoutX="66.0" layoutY="46.0" styleClass="lbl-about-contenu" text="GERARD Alexandre - GIANGRECO Vincent" />
+                        <Label layoutX="100.0" layoutY="14.0" styleClass="lbl-about-titres" text="--- Serveur de jeux fait par ---" />
                         <Label layoutX="78.0" layoutY="99.0" styleClass="lbl-about-titres" text="--- Informations sur l'application---" />
+                        <Label layoutX="65.0" layoutY="57.0" styleClass="lbl-about-contenu" />
+                        <Label layoutX="163.0" layoutY="68.0" styleClass="lbl-about-contenu" text="PERRIA Ines" />
                      </children></AnchorPane>
             </content>
           </Tab>

@@ -1,4 +1,4 @@
-package main.app;
+package Client;
 
 import java.io.IOException;
 
@@ -20,8 +20,8 @@ public class Client extends Application{
 	 @Override
 	    public void start(final Stage primaryStage) throws IOException {
 	        primaryStage.initStyle(StageStyle.UNDECORATED);
-	        primaryStage.setTitle("Pull Moches");
-	        primaryStage.getIcons().add(new Image("file:medias/white/pullover.png"));
+	        primaryStage.setTitle("Serveur de Jeux");
+	        primaryStage.getIcons().add(new Image("file:medias/jeux.png"));
 
 			Parent root = FXMLLoader.load(this.getClass().getResource("/gabarit.fxml"));
 
