@@ -4,6 +4,9 @@ ___
 
 ## Changelog
 
+V.03.22.18:
+- Disons que les allumettes fonctionnent ...
+- Disons ...
 
 V.03.15.01:
 - Interface faite (sauf 2-3 trucs à add par la suite)

@@ -33,6 +33,7 @@
          <top>
             <AnchorPane prefHeight="315.0" prefWidth="357.0" BorderPane.alignment="CENTER">
                <children>
+                  <Button layoutX="14.0" layoutY="22.0" mnemonicParsing="false" text="Nouvelle Partie" />
                   <Button fx:id="a" layoutX="14.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" styleClass="lettre" text="A" />
                   <Button fx:id="b" layoutX="74.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="B" />
                   <Button fx:id="c" layoutX="134.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="C" />
@@ -71,7 +72,6 @@
                   <Line fx:id="erreur9" endX="96.6666259765625" endY="-16.333343505859375" layoutX="504.0" layoutY="146.0" startX="65.5" startY="-4.333343505859375" strokeWidth="3.0" />
                   <Line fx:id="erreur10" endX="16.0" endY="-1.833343505859375" layoutX="552.0" layoutY="187.0" startX="-12.66668701171875" startY="18.666656494140625" strokeWidth="3.0" />
                   <Line fx:id="erreur11" endX="42.6666259765625" endY="-9.333343505859375" layoutX="526.0" layoutY="195.0" startX="71.33331298828125" startY="10.0" strokeWidth="3.0" />
-                  <Button layoutX="14.0" layoutY="22.0" mnemonicParsing="false" text="Nouvelle Partie" />
                </children>
             </AnchorPane>
          </top>

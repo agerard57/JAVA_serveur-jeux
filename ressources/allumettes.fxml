@@ -115,8 +115,7 @@
          <top>
             <AnchorPane prefHeight="89.0" prefWidth="640.0" BorderPane.alignment="CENTER">
                <children>
-                  <Text fx:id="lbl_tour" fill="WHITE" layoutX="257.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl-about-titres" text="--- Commencer une partie ---" textAlignment="CENTER" wrappingWidth="282.15283203125" />
-                  <Button fx:id="btn_nouveau" layoutX="102.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#nouvelle_partie" prefHeight="25.0" prefWidth="124.0" text="Nouvelle partie" />
+                  <Text fx:id="lbl_tour" fill="WHITE" layoutX="104.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl-about-titres" text="--- Commencer une partie ---" textAlignment="CENTER" wrappingWidth="435.15283203125" />
                   <Button fx:id="btn_moins1" layoutX="104.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#moins_1" text="Prendre 1 allumette" />
                   <Button fx:id="btn_moins2" layoutX="257.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#moins_2" text="Prendre 2 allumettes" />
                   <Button fx:id="btn_moins3" layoutX="414.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#moins_3" text="Prendre 3 allumettes" />
