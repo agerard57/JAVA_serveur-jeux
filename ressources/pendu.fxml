@@ -34,32 +34,32 @@
             <AnchorPane prefHeight="315.0" prefWidth="357.0" BorderPane.alignment="CENTER">
                <children>
                   <Button layoutX="14.0" layoutY="22.0" mnemonicParsing="false" text="Nouvelle Partie" />
-                  <Button fx:id="a" layoutX="14.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" styleClass="lettre" text="A" />
-                  <Button fx:id="b" layoutX="74.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="B" />
-                  <Button fx:id="c" layoutX="134.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="C" />
-                  <Button fx:id="d" layoutX="196.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="D" />
-                  <Button fx:id="e" layoutX="256.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="E" />
-                  <Button fx:id="f" layoutX="316.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="F" />
-                  <Button fx:id="g" layoutX="376.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="G" />
-                  <Button fx:id="h" layoutX="14.0" layoutY="139.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="H" />
-                  <Button fx:id="i" layoutX="74.0" layoutY="139.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="I" />
-                  <Button fx:id="j" layoutX="134.0" layoutY="139.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="J" />
-                  <Button fx:id="k" layoutX="196.0" layoutY="139.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="K" />
-                  <Button fx:id="l" layoutX="256.0" layoutY="139.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="L" />
-                  <Button fx:id="m" layoutX="316.0" layoutY="139.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="M" />
-                  <Button fx:id="n" layoutX="376.0" layoutY="139.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="N" />
-                  <Button fx:id="o" layoutX="14.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="O" />
-                  <Button fx:id="p" layoutX="74.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="P" />
-                  <Button fx:id="q" layoutX="134.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="Q" />
-                  <Button fx:id="r" layoutX="256.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="R" />
-                  <Button fx:id="s" layoutX="196.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="S" />
-                  <Button fx:id="t" layoutX="316.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="T" />
-                  <Button fx:id="u" layoutX="376.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="U" />
-                  <Button fx:id="v" layoutX="74.0" layoutY="259.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="V" />
-                  <Button fx:id="w" layoutX="134.0" layoutY="259.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="W" />
-                  <Button fx:id="y" layoutX="256.0" layoutY="259.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="Y" />
-                  <Button layoutX="196.0" layoutY="259.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="X" fx:id="x" />
-                  <Button fx:id="z" layoutX="316.0" layoutY="259.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="30.0" prefWidth="30.0" text="Z" />
+                  <Button fx:id="a" layoutX="14.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickA" prefHeight="30.0" prefWidth="30.0" styleClass="lettre" text="A" />
+                  <Button fx:id="b" layoutX="74.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickB" prefHeight="30.0" prefWidth="30.0" text="B" />
+                  <Button fx:id="c" layoutX="134.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickC" prefHeight="30.0" prefWidth="30.0" text="C" />
+                  <Button fx:id="d" layoutX="196.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickD" prefHeight="30.0" prefWidth="30.0" text="D" />
+                  <Button fx:id="e" layoutX="256.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickE" prefHeight="30.0" prefWidth="30.0" text="E" />
+                  <Button fx:id="f" layoutX="316.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickF" prefHeight="30.0" prefWidth="30.0" text="F" />
+                  <Button fx:id="g" layoutX="376.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickG" prefHeight="30.0" prefWidth="30.0" text="G" />
+                  <Button fx:id="h" layoutX="14.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickH" prefHeight="30.0" prefWidth="30.0" text="H" />
+                  <Button fx:id="i" layoutX="74.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickI" prefHeight="30.0" prefWidth="30.0" text="I" />
+                  <Button fx:id="j" layoutX="134.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickJ" prefHeight="30.0" prefWidth="30.0" text="J" />
+                  <Button fx:id="k" layoutX="196.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickK" prefHeight="30.0" prefWidth="30.0" text="K" />
+                  <Button fx:id="l" layoutX="256.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickL" prefHeight="30.0" prefWidth="30.0" text="L" />
+                  <Button fx:id="m" layoutX="316.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickM" prefHeight="30.0" prefWidth="30.0" text="M" />
+                  <Button fx:id="n" layoutX="376.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickN" prefHeight="30.0" prefWidth="30.0" text="N" />
+                  <Button fx:id="o" layoutX="14.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickO" prefHeight="30.0" prefWidth="30.0" text="O" />
+                  <Button fx:id="p" layoutX="74.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickP" prefHeight="30.0" prefWidth="30.0" text="P" />
+                  <Button fx:id="q" layoutX="134.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickQ" prefHeight="30.0" prefWidth="30.0" text="Q" />
+                  <Button fx:id="s" layoutX="256.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickS" prefHeight="30.0" prefWidth="30.0" text="S" />
+                  <Button fx:id="r" layoutX="196.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickR" prefHeight="30.0" prefWidth="30.0" text="R" />
+                  <Button fx:id="t" layoutX="316.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickT" prefHeight="30.0" prefWidth="30.0" text="T" />
+                  <Button fx:id="u" layoutX="376.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickU" prefHeight="30.0" prefWidth="30.0" text="U" />
+                  <Button fx:id="v" layoutX="74.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickV" prefHeight="30.0" prefWidth="30.0" text="V" />
+                  <Button fx:id="w" layoutX="134.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickW" prefHeight="30.0" prefWidth="30.0" text="W" />
+                  <Button fx:id="y" layoutX="256.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickY" prefHeight="30.0" prefWidth="30.0" text="Y" />
+                  <Button layoutX="196.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickX" prefHeight="30.0" prefWidth="30.0" text="X" fx:id="x" />
+                  <Button fx:id="z" layoutX="316.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickZ" prefHeight="30.0" prefWidth="30.0" text="Z" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="292.0" layoutX="426.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
                   <Line fx:id="erreur1" endX="18.0" layoutX="526.0" layoutY="247.0" startX="-71.33334350585938" strokeWidth="5.0" />
                   <Line fx:id="erreur2" endX="-3.333343505859375" endY="-93.0" layoutX="492.0" layoutY="172.0" startX="-3.333343505859375" startY="73.0" strokeWidth="5.0" />

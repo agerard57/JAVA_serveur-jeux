@@ -7,12 +7,12 @@ public class Serveur {
 
     public static void main(String[] args) {
         try {
-            int port = 8000;
+            int port = 8001;
             LocateRegistry.createRegistry(port);
 
-            /*ImplPendu pendu = new ImplPendu();
-            Naming.rebind("rmi://localhost:8000/pendu", pendu);*/
-            
+            ImplPendu pendu = new ImplPendu();
+            Naming.rebind("rmi://localhost:8000/pendu", pendu);
+           
             ImplAllumettes allumettes = new ImplAllumettes();
             Naming.rebind("rmi://localhost:8000/allumettes", allumettes);
 
