@@ -114,22 +114,26 @@ public class ControlleurTTT implements Initializable{
     	}
     	}
     
-    public Image cliquer(){
+    public boolean cliquer(){
     	if (numTour%2==0){
-    		image=croix;
+    		tourJoueur1=true;
+    		System.out.println("J1");
     	}else{
-    		image=cercle;
+    		tourJoueur2=true;
+    		System.out.println("J2");
     	}
-		return image;
+		return tourJoueur1;
     }
    
-     public void clic00(Image image){
+     public void clic00(){
+    	 System.out.println(numTour);
+    	cliquer();
     	try{
     	btn00.setVisible(false);
-    	img00.setImage(image);
-    	
-    		tourJoueur1=true;
-    		tourJoueur2=false;
+    	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) img00.setImage(croix);
+    	else img00.setImage(cercle);
+    	numTour++;
+    	System.out.println(numTour);
     	}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -137,12 +141,14 @@ public class ControlleurTTT implements Initializable{
 
      
     public void clic01(){
+    	cliquer();
     	try{
         	btn01.setVisible(false);
-        	if (tourJoueur1=true){
-        		img01.setImage(croix);}
-        	else {
-        		img01.setImage(cercle);};
+        	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
+        		img01.setImage(croix);
+        	else img01.setImage(cercle);
+        	numTour++;
+        	System.out.println(numTour);
         	}catch(Exception e) {
     			e.printStackTrace();
     		}
@@ -150,75 +156,108 @@ public class ControlleurTTT implements Initializable{
  
     
     public void clic02(){
+    	cliquer();
     	try{
-        	
+    	btn02.setVisible(false);
+    	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
+    		img02.setImage(croix);
+    	else img02.setImage(cercle);
+    	numTour++;
+    	System.out.println(numTour);
         	}catch(Exception e) {
     			e.printStackTrace();
     		} 
     	
         } 
     
-    @FXML
-    void clic10(MouseEvent event){
+    
+    public void clic10(){
+    	cliquer();
     	try{
-    		btn00.setDisable(false);
-			img00.setImage(croix);
-    	//lblTTT.setText("Okk");
-    	}catch(Exception e) {
-			e.printStackTrace();
-		}
-    } 
-    @FXML
-    void clic11(MouseEvent event){
+    	btn10.setVisible(false);
+    	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
+    		img10.setImage(croix);
+    	else img10.setImage(cercle);
+    	numTour++;
+    	System.out.println(numTour);
+        	}catch(Exception e) {
+    			e.printStackTrace();
+    		} 
+    	
+        } 
+    public void clic11(){
+    	cliquer();
     	try{
-    		btn00.setDisable(false);
-			img00.setImage(croix);
-    	//lblTTT.setText("Okk");
-    	}catch(Exception e) {
-			e.printStackTrace();
-		}
-    } 
-    @FXML
-    void clic12(MouseEvent event){
+    	btn11.setVisible(false);
+    	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
+    		img11.setImage(croix);
+    	else img11.setImage(cercle);
+    	numTour++;
+    	System.out.println(numTour);
+        	}catch(Exception e) {
+    			e.printStackTrace();
+    		} 
+    	
+        } 
+    public void clic12(){
+    	cliquer();
     	try{
-    		btn00.setDisable(false);
-			img00.setImage(croix);
-    	//lblTTT.setText("Okk");
-    	}catch(Exception e) {
-			e.printStackTrace();
-		}
-    } 
-    @FXML
-    void clic20(MouseEvent event){
+    	btn12.setVisible(false);
+    	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
+    		img12.setImage(croix);
+    	else img12.setImage(cercle);
+    	numTour++;
+    	System.out.println(numTour);
+        	}catch(Exception e) {
+    			e.printStackTrace();
+    		} 
+    	
+        } 
+    
+    public void clic20(){
+    	cliquer();
     	try{
-    		btn00.setDisable(false);
-			img00.setImage(croix);
-    	//lblTTT.setText("Okk");
-    	}catch(Exception e) {
-			e.printStackTrace();
-		}
-    }
-    @FXML
-    void clic21(MouseEvent event){
+    	btn20.setVisible(false);
+    	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
+    		img20.setImage(croix);
+    	else img20.setImage(cercle);
+    	numTour++;
+    	System.out.println(numTour);
+        	}catch(Exception e) {
+    			e.printStackTrace();
+    		} 
+    	
+        } 
+    public void clic21(){
+    	cliquer();
     	try{
-    		btn00.setDisable(false);
-			img00.setImage(croix);
-    	//lblTTT.setText("Okk");
-    	}catch(Exception e) {
-			e.printStackTrace();
-		}
-    }
-
-    @FXML
-    void clic22(MouseEvent event){
+    	btn21.setVisible(false);
+    	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
+    		img21.setImage(croix);
+    	else img21.setImage(cercle);
+    	numTour++;
+    	System.out.println(numTour);
+        	}catch(Exception e) {
+    			e.printStackTrace();
+    		} 
+    	
+        } 
+    
+    public void clic22(){
+    	cliquer();
     	try{
-    		btn00.setDisable(false);
-			img00.setImage(croix);
-    	//lblTTT.setText("Okk");
-    	}catch(Exception e) {
-			e.printStackTrace();
-		}
-    }
+    	btn22.setVisible(false);
+    	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
+    		img22.setImage(croix);
+    	else img22.setImage(cercle);
+    	numTour++;
+    	System.out.println(numTour);
+        	}catch(Exception e) {
+    			e.printStackTrace();
+    		} 
+    	
+        } 
+    
     public void clicBoutons (Image image){
     	if (btn00.getOnMouseClicked() != null){
     		

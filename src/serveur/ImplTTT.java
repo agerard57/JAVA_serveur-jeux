@@ -45,6 +45,11 @@ public class ImplTTT extends UnicastRemoteObject implements InterfaceTTT{
 		//	boolean[] tourDe ={tourJoueur1};
 			return tourDe;
 	}
+	
+	public int numTour(){
+		int numT=0;
+		return numT;
+	}
 		
 	
 	public boolean enAttente(int idP) throws RemoteException {
