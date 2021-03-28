@@ -41,7 +41,7 @@ public class Client extends Application{
 	            }
 	        });
 
-	        Scene scene = new Scene(root, 658, 405);
+	        Scene scene = new Scene(root, 800, 500);
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
 	        

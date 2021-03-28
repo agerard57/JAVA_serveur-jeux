@@ -4,6 +4,11 @@ ___
 
 ## Changelog
 
+V.03.28.17:
+- Code changé pour augmenter les dimensions : 800*500
+- Layout du pendu changé
+- Fix de quelques typos
+
 V.03.28.16.2:
 - Pendu operationnel à 100%
 - Tic-Tac-Toe presque terminé
