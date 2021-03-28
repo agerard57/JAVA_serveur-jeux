@@ -4,8 +4,9 @@ ___
 
 ## Changelog
 
-V.03.26.18:
+V.03.28.16.2:
 - Pendu operationnel à 100%
+- Tic-Tac-Toe presque terminé
 
 V.03.22.18:
 - Disons que les allumettes fonctionnent ...
