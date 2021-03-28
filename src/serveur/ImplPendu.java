@@ -1,7 +1,8 @@
 package serveur;
 
-import javafx.scene.control.Button;
-
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ public class ImplPendu extends UnicastRemoteObject implements InterfacePendu{
 	    ArrayList<String> listeMot;
 	    ArrayList<Integer> listeEssais;
 
-	    ArrayList<String> toutLesMots;
+	    ArrayList<String> tousLesMots;
 
 	    int nbGame;
 
@@ -22,38 +23,43 @@ public class ImplPendu extends UnicastRemoteObject implements InterfacePendu{
 	        listeListeLettre = new ArrayList<ArrayList<Character>>();
 	        listeMot = new ArrayList<String>();
 	        listeEssais = new ArrayList<Integer>();
-	        toutLesMots = new ArrayList<String>();
-
-	        toutLesMots.add("Carotte");
-	        toutLesMots.add("Choux Fleur");
-	        toutLesMots.add("Pois Chiche");
-	        toutLesMots.add("Table");
-	        toutLesMots.add("Chat");
-	        toutLesMots.add("Etabli");
-	        toutLesMots.add("Bureau");
-	        toutLesMots.add("Tapis de jeu");
+	        tousLesMots = new ArrayList<String>();
+//lecture d'un fichier pour stocker dans une ArrayList tous les mots s'y trouvant 
+	        String line;
+	        BufferedReader fichier;
+	        try
+	        {
+	        	fichier = new BufferedReader(new FileReader(new File("save.txt")));
+	        	while((line = fichier.readLine()) != null ) {
+	        		tousLesMots.add(line.replace('\n', ' ').trim());
+	        	}
+	        	fichier.close();
+	        }
+	        catch(Exception e) {
+	        	e.printStackTrace();
+	        }
 	    }
-
+// génère l'affichage du mot en tenant compte des lettres trouvées
 	    @Override
 	    public String motAffiche(int id_game) {
 	        String affichage = new String();
-	        boolean found;
+	        boolean trouve;
 	        int i;
 	        int j;
-
+	        
 	        i = 0;
 	        while (i < listeMot.get(id_game).length()) {
 	            j = 0;
 
-	            found = false;
+	            trouve = false;
 	            while (j < listeListeLettre.get(id_game).size()) {
 	                if (listeListeLettre.get(id_game).get(j) == listeMot.get(id_game).charAt(i) || listeListeLettre.get(id_game).get(j) == Character.toLowerCase(listeMot.get(id_game).charAt(i))) {
-	                    found = true;
+	                    trouve = true;
 	                    affichage = affichage + " " + listeMot.get(id_game).charAt(i);
 	                }
 	                j++;
 	            }
-	            if (!found)
+	            if (!trouve)
 	                affichage = affichage + " _";
 	            i++;
 	        }
@@ -61,16 +67,18 @@ public class ImplPendu extends UnicastRemoteObject implements InterfacePendu{
 	        return (affichage);
 	    }
 
+	    //on récupère le mot
 	    @Override
 	    public String Mot(int id_game) {
 	        return (listeMot.get(id_game));
 	    }
 
+	    //donne le nombre d'essais
 	    @Override
 	    public int NbEssais(int id_game) {
 	        return (listeEssais.get(id_game));
 	    }
-
+	    //regarde si la lettre en entrée correspond bien à une lettre du mot de la partie actuelle
 	    @Override
 	    public void proposeLettre(int id_game, char lettre) {
 	        if (!listeMot.get(id_game).contains(Character.toString(lettre)) && !listeMot.get(id_game).contains(Character.toString(lettre).toUpperCase())) {
@@ -80,39 +88,66 @@ public class ImplPendu extends UnicastRemoteObject implements InterfacePendu{
 	        listeListeLettre.get(id_game).add(lettre);
 	    }
 
+	    //s'occupe de gérer la fin, que le mot ait été trouvé ou non 
 	    @Override
 	    public boolean Fin(int id_game) {
-	        if (listeEssais.get(id_game) >= 7)
+	        if (listeEssais.get(id_game) >= 10)
 	            return (true);
 	        else {
-	            boolean found;
+	            boolean trouve;
 	            int i;
 
 	            i = 0;
-	            found = true;
-	            while (found && i < listeMot.get(id_game).length()) {
+	            trouve = true;
+	            while (trouve && i < listeMot.get(id_game).length()) {
 	                if (!listeListeLettre.get(id_game).contains(listeMot.get(id_game).charAt(i)) && !listeListeLettre.get(id_game).contains(Character.toLowerCase(listeMot.get(id_game).charAt(i)))) {
-	                    found = false;
+	                    trouve = false;
 	                }
 	                i++;
 	            }
 
-	            if (!found)
+	            if (!trouve)
 	                return (false);
 	            return (true);
 	        }
 	    }
 
+	    //nouveau pendu si c'est la première partie
 	    @Override
 	    public int nouveauPendu() {
 	        listeListeLettre.add(new ArrayList<Character>());
-	        listeMot.add(toutLesMots.get((int) (Math.random() * toutLesMots.size())));
+	        listeMot.add(tousLesMots.get((int) (Math.random() * tousLesMots.size())));
 	        listeEssais.add(0);
 
 	        nbGame++;
 	        listeListeLettre.get(nbGame).add(' ');
 	        listeListeLettre.get(nbGame).add('\'');
 	        return (nbGame);
+	    }
+	    //nouveau pendu si il y avait déjà une partie avant celle la 
+	    @Override
+	    public int nouveauPendu(int i) {
+	    	if (i >= nbGame) {
+	    		
+	    	listeListeLettre.add(new ArrayList<Character>());
+	    	listeMot.add(tousLesMots.get((int) (Math.random() * tousLesMots.size())));
+	    	listeEssais.add(0);
+	    	
+	    	nbGame++;
+	    	listeListeLettre.get(nbGame).add(' ');
+	    	listeListeLettre.get(nbGame).add('\'');
+	    	return (nbGame);
+	    	}
+	    	else {
+	    		
+	    		listeListeLettre.set(i, new ArrayList<Character>());
+	    		listeMot.set(i, tousLesMots.get((int) (Math.random() * tousLesMots.size())));
+	    		listeEssais.set(i, 0);
+	    		
+	    		listeListeLettre.get(i).add(' ');
+	    		listeListeLettre.get(i).add('\'');
+	    		return (i);
+	    	}
 	    }
 	
 	

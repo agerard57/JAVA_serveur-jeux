@@ -4,8 +4,8 @@ ___
 
 ## Changelog
 
-V.03.22.21:
-- Début pendu ( erreur FXML à régler ) 
+V.03.26.18:
+- Pendu operationnel à 100%
 
 V.03.22.18:
 - Disons que les allumettes fonctionnent ...

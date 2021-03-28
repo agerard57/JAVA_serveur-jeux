@@ -11,10 +11,10 @@ public class Serveur {
             LocateRegistry.createRegistry(port);
 
             ImplPendu pendu = new ImplPendu();
-            Naming.rebind("rmi://localhost:8000/pendu", pendu);
+            Naming.rebind("rmi://localhost:8001/pendu", pendu);
            
             ImplAllumettes allumettes = new ImplAllumettes();
-            Naming.rebind("rmi://localhost:8000/allumettes", allumettes);
+            Naming.rebind("rmi://localhost:8001/allumettes", allumettes);
 
             /*ImplTTT tictactoe = new ImplTTT();
             Naming.rebind("rmi://localhost:8000/tictactoe", tictactoe);*/
