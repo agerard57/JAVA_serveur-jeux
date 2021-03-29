@@ -6,6 +6,7 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.util.ResourceBundle;
 
+import Client.Client;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -85,6 +86,11 @@ public class ControlleurTTT implements Initializable{
 
     public int numbtn;
     public Image image;
+    
+    public char[][] tabJeu = new char[3][3];
+    public String phraseVictoire;
+    public boolean victoire;
+    
     @Override
     public void initialize(URL arg0, ResourceBundle arg1){   
     	try{
@@ -114,6 +120,8 @@ public class ControlleurTTT implements Initializable{
     	}
     	}
     
+    
+    
     public boolean cliquer(){
     	if (numTour%2==0){
     		tourJoueur1=true;
@@ -125,15 +133,59 @@ public class ControlleurTTT implements Initializable{
 		return tourJoueur1;
     }
    
-     public void clic00(){
-    	 System.out.println(numTour);
+    public void verifVictoire(){
+    	victoire=true;
+    	if ((tabJeu[0][0]=='x')&&(tabJeu[0][1]=='x')&&(tabJeu[0][2]=='x')) phraseVictoire="Joueur1 a gagné sur la ligne 1";
+    	else if ((tabJeu[1][0]=='x')&&(tabJeu[1][1]=='x')&&(tabJeu[1][2]=='x')) phraseVictoire="Joueur1 a gagné sur la ligne 2";
+    	else if ((tabJeu[2][0]=='x')&&(tabJeu[2][1]=='x')&&(tabJeu[2][2]=='x')) phraseVictoire="Joueur1 a gagné sur la ligne 3";
+    	else if ((tabJeu[0][0]=='x')&&(tabJeu[1][0]=='x')&&(tabJeu[2][0]=='x')) phraseVictoire="Joueur1 a gagné sur la colonne 1";
+    	else if ((tabJeu[0][1]=='x')&&(tabJeu[1][1]=='x')&&(tabJeu[2][1]=='x')) phraseVictoire="Joueur1 a gagné sur la colonne 2";
+    	else if ((tabJeu[0][2]=='x')&&(tabJeu[1][2]=='x')&&(tabJeu[2][2]=='x')) phraseVictoire="Joueur1 a gagné sur la colonne 3";
+    	else if ((tabJeu[0][0]=='x')&&(tabJeu[1][1]=='x')&&(tabJeu[2][2]=='x')) phraseVictoire="Joueur1 a gagné sur la diagonale G-D";
+    	else if ((tabJeu[0][2]=='x')&&(tabJeu[1][1]=='x')&&(tabJeu[2][0]=='x')) phraseVictoire="Joueur1 a gagné sur la diagonale D-G";
+    	//----------------------------------------------------------------------------------------------------------------------------
+    	else if ((tabJeu[0][0]=='o')&&(tabJeu[0][1]=='o')&&(tabJeu[0][2]=='o')) phraseVictoire="Joueur2 a gagné sur la ligne 1";
+    	else if ((tabJeu[1][0]=='o')&&(tabJeu[1][1]=='o')&&(tabJeu[1][2]=='o')) phraseVictoire="Joueur2 a gagné sur la ligne 2";
+    	else if ((tabJeu[2][0]=='o')&&(tabJeu[2][1]=='o')&&(tabJeu[2][2]=='o')) phraseVictoire="Joueur2 a gagné sur la ligne 3";
+    	else if ((tabJeu[0][0]=='o')&&(tabJeu[1][0]=='o')&&(tabJeu[2][0]=='o')) phraseVictoire="Joueur2 a gagné sur la colonne 1";
+    	else if ((tabJeu[0][1]=='o')&&(tabJeu[1][1]=='o')&&(tabJeu[2][1]=='o')) phraseVictoire="Joueur2 a gagné sur la colonne 2";
+    	else if ((tabJeu[0][2]=='o')&&(tabJeu[1][2]=='o')&&(tabJeu[2][2]=='o')) phraseVictoire="Joueur2 a gagné sur la colonne 3";
+    	else if ((tabJeu[0][0]=='o')&&(tabJeu[1][1]=='o')&&(tabJeu[2][2]=='o')) phraseVictoire="Joueur2 a gagné sur la diagonale G-D";
+    	else if ((tabJeu[0][2]=='o')&&(tabJeu[1][1]=='o')&&(tabJeu[2][0]=='o')) phraseVictoire="Joueur2 a gagné sur la diagonale D-G";
+    	else victoire=false;
+    	//----------------------------------------------------------------------------------------------------------------------------
+    	if (victoire) {
+    		lblTTT.setText(phraseVictoire);
+    		btn00.setDisable(true);
+    		btn01.setDisable(true);
+    		btn02.setDisable(true);
+    		btn10.setDisable(true);
+    		btn11.setDisable(true);
+    		btn12.setDisable(true);
+    		btn20.setDisable(true);
+    		btn21.setDisable(true);
+    		btn22.setDisable(true);
+    	}
+    	else lblTTT.setText("Aucun gagnant");
+    	System.out.println(phraseVictoire);
+    }
+    
+   
+
+	public void clic00(){
+    	System.out.println(numTour);
     	cliquer();
     	try{
     	btn00.setVisible(false);
-    	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) img00.setImage(croix);
-    	else img00.setImage(cercle);
+    	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8))
+    		{img00.setImage(croix);
+    		tabJeu[0][0]='x';    		}
+    	else {img00.setImage(cercle);
+    	tabJeu[0][0]='o';    	}
     	numTour++;
-    	System.out.println(numTour);
+    	//System.out.println(numTour);
+    	//System.out.println(tabJeu[0][0]);
+    	verifVictoire();
     	}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -145,10 +197,14 @@ public class ControlleurTTT implements Initializable{
     	try{
         	btn01.setVisible(false);
         	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
-        		img01.setImage(croix);
-        	else img01.setImage(cercle);
+        		{img01.setImage(croix);
+        		tabJeu[0][1]='x';}
+        	else {img01.setImage(cercle);
+        	tabJeu[0][1]='o';        	}
         	numTour++;
-        	System.out.println(numTour);
+        	//System.out.println(numTour);
+        	//System.out.println(tabJeu[0][1]);
+        	verifVictoire();
         	}catch(Exception e) {
     			e.printStackTrace();
     		}
@@ -160,10 +216,14 @@ public class ControlleurTTT implements Initializable{
     	try{
     	btn02.setVisible(false);
     	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
-    		img02.setImage(croix);
-    	else img02.setImage(cercle);
+    		{img02.setImage(croix);
+    		tabJeu[0][2]='x';	}
+    	else {img02.setImage(cercle);
+    	tabJeu[0][2]='o';    	}
     	numTour++;
-    	System.out.println(numTour);
+    	//System.out.println(numTour);
+    	//System.out.println(tabJeu[0][2]);
+    	verifVictoire();
         	}catch(Exception e) {
     			e.printStackTrace();
     		} 
@@ -176,10 +236,14 @@ public class ControlleurTTT implements Initializable{
     	try{
     	btn10.setVisible(false);
     	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
-    		img10.setImage(croix);
-    	else img10.setImage(cercle);
+    		{img10.setImage(croix);
+    		tabJeu[1][0]='x';    		}
+    	else {img10.setImage(cercle);
+    	tabJeu[1][0]='o';    	}
     	numTour++;
-    	System.out.println(numTour);
+    	//System.out.println(numTour);
+    	//System.out.println(tabJeu[1][0]);
+    	verifVictoire();
         	}catch(Exception e) {
     			e.printStackTrace();
     		} 
@@ -190,10 +254,14 @@ public class ControlleurTTT implements Initializable{
     	try{
     	btn11.setVisible(false);
     	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
-    		img11.setImage(croix);
-    	else img11.setImage(cercle);
+    		{img11.setImage(croix);
+    		tabJeu[1][1]='x';    		}
+    	else {img11.setImage(cercle);
+    	tabJeu[1][1]='o';    	}
     	numTour++;
-    	System.out.println(numTour);
+    	//System.out.println(numTour);
+    	//System.out.println(tabJeu[1][1]);
+    	verifVictoire();
         	}catch(Exception e) {
     			e.printStackTrace();
     		} 
@@ -204,10 +272,14 @@ public class ControlleurTTT implements Initializable{
     	try{
     	btn12.setVisible(false);
     	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
-    		img12.setImage(croix);
-    	else img12.setImage(cercle);
+    		{img12.setImage(croix);
+    		tabJeu[1][2]='x';    		}
+    	else {img12.setImage(cercle);
+    	tabJeu[1][2]='o';    	}
     	numTour++;
-    	System.out.println(numTour);
+    	//System.out.println(numTour);
+    	//System.out.println(tabJeu[1][2]);
+    	verifVictoire();
         	}catch(Exception e) {
     			e.printStackTrace();
     		} 
@@ -219,10 +291,14 @@ public class ControlleurTTT implements Initializable{
     	try{
     	btn20.setVisible(false);
     	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
-    		img20.setImage(croix);
-    	else img20.setImage(cercle);
+    		{img20.setImage(croix);
+    		tabJeu[2][0]='x';    		}
+    	else {img20.setImage(cercle);
+    	tabJeu[2][0]='o';    	}
     	numTour++;
-    	System.out.println(numTour);
+    	//System.out.println(numTour);
+    	//System.out.println(tabJeu[2][0]);
+    	verifVictoire();
         	}catch(Exception e) {
     			e.printStackTrace();
     		} 
@@ -233,10 +309,14 @@ public class ControlleurTTT implements Initializable{
     	try{
     	btn21.setVisible(false);
     	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
-    		img21.setImage(croix);
-    	else img21.setImage(cercle);
+    		{img21.setImage(croix);
+    		tabJeu[2][1]='x';    		}
+    	else {img21.setImage(cercle);
+    	tabJeu[2][1]='o';    	}
     	numTour++;
-    	System.out.println(numTour);
+    	//System.out.println(numTour);
+    	//System.out.println(tabJeu[2][1]);
+    	verifVictoire();
         	}catch(Exception e) {
     			e.printStackTrace();
     		} 
@@ -248,21 +328,19 @@ public class ControlleurTTT implements Initializable{
     	try{
     	btn22.setVisible(false);
     	if ((numTour==0)||(numTour==2)||(numTour==4)||(numTour==6)||(numTour==8)) 
-    		img22.setImage(croix);
-    	else img22.setImage(cercle);
+    		{img22.setImage(croix);
+    		tabJeu[2][2]='x';    		}
+    	else {img22.setImage(cercle);
+    	tabJeu[2][2]='o';    	}
     	numTour++;
-    	System.out.println(numTour);
+    	//System.out.println(numTour);
+    	//System.out.println(tabJeu[2][2]);
+    	verifVictoire();
         	}catch(Exception e) {
     			e.printStackTrace();
     		} 
     	
         } 
     
-    public void clicBoutons (Image image){
-    	if (btn00.getOnMouseClicked() != null){
-    		
-    	}
-   // 	btn00.setOnAction(new EventHandler<ActionEvent>(){});
-   	}
-    
+
 }
