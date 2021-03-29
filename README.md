@@ -4,6 +4,9 @@ ___
 
 ## Changelog
 
+V.03.29.15:
+- Encore refait les pages fxml avec scene-builder
+
 V.03.28.17:
 - Code changé pour augmenter les dimensions : 800*500
 - Layout du pendu changé

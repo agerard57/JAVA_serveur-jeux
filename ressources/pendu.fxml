@@ -11,9 +11,9 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="640.0" style="-fx-background-color: #25221e;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurs.ControlleurPendu">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="800.0" style="-fx-background-color: #25221e;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurs.ControlleurPendu">
   <children>
-      <BorderPane prefHeight="605.0" prefWidth="659.0" styleClass="background">
+      <BorderPane prefHeight="470.0" prefWidth="800.0" styleClass="background">
          <bottom>
             <Label fx:id="lblPendu" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="60.0" prefWidth="544.0" style="&#10;" styleClass="lbl-bas" text="-- Le jeu du pendu --" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS" wrapText="false" BorderPane.alignment="CENTER">
                <font>
@@ -30,52 +30,133 @@
                </BorderPane.margin>
             </Label>
          </bottom>
-         <top>
-            <AnchorPane prefHeight="315.0" prefWidth="357.0" BorderPane.alignment="CENTER">
+         <right>
+            <AnchorPane prefHeight="470.0" prefWidth="800.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="btn_nouveau" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" onAction="#nv_partie" text="Nouvelle Partie" />
-                  <Button fx:id="a" layoutX="14.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickA" prefHeight="30.0" prefWidth="30.0" styleClass="lettre" text="A" />
-                  <Button fx:id="b" layoutX="74.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickB" prefHeight="30.0" prefWidth="30.0" text="B" />
-                  <Button fx:id="c" layoutX="134.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickC" prefHeight="30.0" prefWidth="30.0" text="C" />
-                  <Button fx:id="d" layoutX="196.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickD" prefHeight="30.0" prefWidth="30.0" text="D" />
-                  <Button fx:id="e" layoutX="256.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickE" prefHeight="30.0" prefWidth="30.0" text="E" />
-                  <Button fx:id="f" layoutX="316.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickF" prefHeight="30.0" prefWidth="30.0" text="F" />
-                  <Button fx:id="g" layoutX="376.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickG" prefHeight="30.0" prefWidth="30.0" text="G" />
-                  <Button fx:id="h" layoutX="14.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickH" prefHeight="30.0" prefWidth="30.0" text="H" />
-                  <Button fx:id="i" layoutX="74.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickI" prefHeight="30.0" prefWidth="30.0" text="I" />
-                  <Button fx:id="j" layoutX="134.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickJ" prefHeight="30.0" prefWidth="30.0" text="J" />
-                  <Button fx:id="k" layoutX="196.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickK" prefHeight="30.0" prefWidth="30.0" text="K" />
-                  <Button fx:id="l" layoutX="256.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickL" prefHeight="30.0" prefWidth="30.0" text="L" />
-                  <Button fx:id="m" layoutX="316.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickM" prefHeight="30.0" prefWidth="30.0" text="M" />
-                  <Button fx:id="n" layoutX="376.0" layoutY="139.0" mnemonicParsing="false" onAction="#clickN" prefHeight="30.0" prefWidth="30.0" text="N" />
-                  <Button fx:id="o" layoutX="14.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickO" prefHeight="30.0" prefWidth="30.0" text="O" />
-                  <Button fx:id="p" layoutX="74.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickP" prefHeight="30.0" prefWidth="30.0" text="P" />
-                  <Button fx:id="q" layoutX="134.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickQ" prefHeight="30.0" prefWidth="30.0" text="Q" />
-                  <Button fx:id="s" layoutX="256.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickS" prefHeight="30.0" prefWidth="30.0" text="S" />
-                  <Button fx:id="r" layoutX="196.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickR" prefHeight="30.0" prefWidth="30.0" text="R" />
-                  <Button fx:id="t" layoutX="316.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickT" prefHeight="30.0" prefWidth="30.0" text="T" />
-                  <Button fx:id="u" layoutX="376.0" layoutY="199.0" mnemonicParsing="false" onAction="#clickU" prefHeight="30.0" prefWidth="30.0" text="U" />
-                  <Button fx:id="v" layoutX="74.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickV" prefHeight="30.0" prefWidth="30.0" text="V" />
-                  <Button fx:id="w" layoutX="134.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickW" prefHeight="30.0" prefWidth="30.0" text="W" />
-                  <Button fx:id="y" layoutX="256.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickY" prefHeight="30.0" prefWidth="30.0" text="Y" />
-                  <Button layoutX="196.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickX" prefHeight="30.0" prefWidth="30.0" text="X" fx:id="x" />
-                  <Button fx:id="z" layoutX="316.0" layoutY="259.0" mnemonicParsing="false" onAction="#clickZ" prefHeight="30.0" prefWidth="30.0" text="Z" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="292.0" layoutX="426.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-                  <Line fx:id="erreur1" endX="18.0" layoutX="526.0" layoutY="247.0" startX="-71.33334350585938" strokeWidth="5.0" />
-                  <Line fx:id="erreur2" endX="-3.333343505859375" endY="-93.0" layoutX="492.0" layoutY="172.0" startX="-3.333343505859375" startY="73.0" strokeWidth="5.0" />
-                  <Line fx:id="erreur3" endX="63.33331298828125" layoutX="527.0" layoutY="77.0" startX="-37.999969482421875" strokeWidth="5.0" />
-                  <Line fx:id="erreur4" endX="-8.0" endY="-36.333343505859375" layoutX="526.0" layoutY="114.0" startX="-36.666656494140625" startY="-7.66668701171875" strokeWidth="4.0" />
-                  <Line fx:id="erreur5" endX="7.0" endY="19.666656494140625" layoutX="561.0" layoutY="82.0" startX="7.0" startY="-3.0" strokeWidth="4.0" />
-                  <Circle fx:id="erreur6" layoutX="568.0" layoutY="110.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Line fx:id="erreur7" endX="48.0" endY="-34.66668701171875" layoutX="520.0" layoutY="157.0" startX="48.0" startY="26.666656494140625" strokeWidth="3.0" />
-                  <Line fx:id="erreur8" endX="80.33331298828125" endY="-11.333343505859375" layoutX="487.0" layoutY="153.0" startX="49.0" startY="-23.333343505859375" strokeWidth="3.0" />
-                  <Line fx:id="erreur9" endX="96.6666259765625" endY="-16.333343505859375" layoutX="504.0" layoutY="146.0" startX="65.5" startY="-4.333343505859375" strokeWidth="3.0" />
-                  <Line fx:id="erreur10" endX="16.0" endY="-1.833343505859375" layoutX="552.0" layoutY="187.0" startX="-12.66668701171875" startY="18.666656494140625" strokeWidth="3.0" />
-                  <Line fx:id="erreur11" endX="42.6666259765625" endY="-9.333343505859375" layoutX="526.0" layoutY="195.0" startX="71.33331298828125" startY="10.0" strokeWidth="3.0" />
-                  <Label fx:id="lbl_mot" layoutX="166.0" layoutY="13.0" prefHeight="42.0" prefWidth="178.0" text="Label" textFill="#fafafa" />
+                  <Button fx:id="btn_nouveau" layoutX="581.0" layoutY="35.0" mnemonicParsing="false" onAction="#nv_partie" prefHeight="25.0" prefWidth="201.0" text="Nouvelle Partie" />
+                  <Button fx:id="a" layoutX="14.0" layoutY="82.0" mnemonicParsing="false" onAction="#clickA" prefHeight="60.0" prefWidth="60.0" styleClass="lettre" text="A">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="b" layoutX="94.0" layoutY="81.0" mnemonicParsing="false" onAction="#clickB" prefHeight="60.0" prefWidth="60.0" text="B">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="c" layoutX="174.0" layoutY="81.0" mnemonicParsing="false" onAction="#clickC" prefHeight="60.0" prefWidth="60.0" text="C">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="d" layoutX="254.0" layoutY="81.0" mnemonicParsing="false" onAction="#clickD" prefHeight="60.0" prefWidth="60.0" text="D">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="e" layoutX="334.0" layoutY="81.0" mnemonicParsing="false" onAction="#clickE" prefHeight="60.0" prefWidth="60.0" text="E">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="f" layoutX="414.0" layoutY="81.0" mnemonicParsing="false" onAction="#clickF" prefHeight="60.0" prefWidth="60.0" text="F">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="g" layoutX="494.0" layoutY="81.0" mnemonicParsing="false" onAction="#clickG" prefHeight="60.0" prefWidth="60.0" text="G">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="h" layoutX="14.0" layoutY="162.0" mnemonicParsing="false" onAction="#clickH" prefHeight="60.0" prefWidth="60.0" text="H">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="i" layoutX="94.0" layoutY="161.0" mnemonicParsing="false" onAction="#clickI" prefHeight="60.0" prefWidth="60.0" text="I">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="j" layoutX="174.0" layoutY="161.0" mnemonicParsing="false" onAction="#clickJ" prefHeight="60.0" prefWidth="60.0" text="J">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="k" layoutX="254.0" layoutY="161.0" mnemonicParsing="false" onAction="#clickK" prefHeight="60.0" prefWidth="60.0" text="K">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="l" layoutX="334.0" layoutY="161.0" mnemonicParsing="false" onAction="#clickL" prefHeight="60.0" prefWidth="60.0" text="L">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="m" layoutX="414.0" layoutY="161.0" mnemonicParsing="false" onAction="#clickM" prefHeight="60.0" prefWidth="60.0" text="M">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="n" layoutX="494.0" layoutY="161.0" mnemonicParsing="false" onAction="#clickN" prefHeight="60.0" prefWidth="60.0" text="N">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="o" layoutX="14.0" layoutY="242.0" mnemonicParsing="false" onAction="#clickO" prefHeight="60.0" prefWidth="60.0" text="O">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="p" layoutX="94.0" layoutY="242.0" mnemonicParsing="false" onAction="#clickP" prefHeight="60.0" prefWidth="60.0" text="P">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="q" layoutX="174.0" layoutY="242.0" mnemonicParsing="false" onAction="#clickQ" prefHeight="60.0" prefWidth="60.0" text="Q">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="s" layoutX="334.0" layoutY="242.0" mnemonicParsing="false" onAction="#clickS" prefHeight="60.0" prefWidth="60.0" text="S">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="r" layoutX="254.0" layoutY="242.0" mnemonicParsing="false" onAction="#clickR" prefHeight="60.0" prefWidth="60.0" text="R">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="t" layoutX="414.0" layoutY="242.0" mnemonicParsing="false" onAction="#clickT" prefHeight="60.0" prefWidth="60.0" text="T">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="u" layoutX="494.0" layoutY="242.0" mnemonicParsing="false" onAction="#clickU" prefHeight="60.0" prefWidth="60.0" text="U">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="v" layoutX="94.0" layoutY="322.0" mnemonicParsing="false" onAction="#clickV" prefHeight="60.0" prefWidth="60.0" text="V">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="w" layoutX="174.0" layoutY="322.0" mnemonicParsing="false" onAction="#clickW" prefHeight="60.0" prefWidth="60.0" text="W">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="y" layoutX="334.0" layoutY="322.0" mnemonicParsing="false" onAction="#clickY" prefHeight="60.0" prefWidth="60.0" text="Y">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button layoutX="254.0" layoutY="322.0" mnemonicParsing="false" onAction="#clickX" prefHeight="60.0" prefWidth="60.0" text="X" fx:id="x">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Button fx:id="z" layoutX="414.0" layoutY="322.0" mnemonicParsing="false" onAction="#clickZ" prefHeight="60.0" prefWidth="60.0" text="Z">
+                     <font>
+                        <Font size="23.0" />
+                     </font></Button>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="304.0" layoutX="581.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Line fx:id="erreur1" endX="18.0" layoutX="679.0" layoutY="316.0" startX="-71.33334350585938" strokeWidth="5.0" />
+                  <Line fx:id="erreur2" endX="-3.333343505859375" endY="-93.0" layoutX="645.0" layoutY="241.0" startX="-3.333343505859375" startY="73.0" strokeWidth="5.0" />
+                  <Line fx:id="erreur3" endX="63.33331298828125" layoutX="680.0" layoutY="146.0" startX="-37.999969482421875" strokeWidth="5.0" />
+                  <Line fx:id="erreur4" endX="-8.0" endY="-36.333343505859375" layoutX="679.0" layoutY="183.0" startX="-36.666656494140625" startY="-7.66668701171875" strokeWidth="4.0" />
+                  <Line fx:id="erreur5" endX="7.0" endY="19.666656494140625" layoutX="714.0" layoutY="151.0" startX="7.0" startY="-3.0" strokeWidth="4.0" />
+                  <Circle fx:id="erreur6" layoutX="721.0" layoutY="179.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Line fx:id="erreur7" endX="48.0" endY="-34.66668701171875" layoutX="673.0" layoutY="226.0" startX="48.0" startY="26.666656494140625" strokeWidth="3.0" />
+                  <Line fx:id="erreur8" endX="80.33331298828125" endY="-11.333343505859375" layoutX="640.0" layoutY="222.0" startX="49.0" startY="-23.333343505859375" strokeWidth="3.0" />
+                  <Line fx:id="erreur9" endX="96.6666259765625" endY="-16.333343505859375" layoutX="657.0" layoutY="215.0" startX="65.5" startY="-4.333343505859375" strokeWidth="3.0" />
+                  <Line fx:id="erreur10" endX="16.0" endY="-1.833343505859375" layoutX="705.0" layoutY="256.0" startX="-12.66668701171875" startY="18.666656494140625" strokeWidth="3.0" />
+                  <Line fx:id="erreur11" endX="42.6666259765625" endY="-9.333343505859375" layoutX="679.0" layoutY="264.0" startX="71.33331298828125" startY="10.0" strokeWidth="3.0" />
+                  <Label fx:id="lbl_mot" alignment="CENTER" layoutX="13.0" layoutY="18.0" prefHeight="42.0" prefWidth="541.0" text="Label" textAlignment="CENTER" textFill="#fafafa">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Label>
                </children>
             </AnchorPane>
-         </top>
+         </right>
       </BorderPane>
   </children>
 </VBox>

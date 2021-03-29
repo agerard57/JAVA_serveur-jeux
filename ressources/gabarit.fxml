@@ -8,12 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="405.0" prefWidth="658.0" styleClass="background" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurs.ControlleurGabarit">
+<VBox prefHeight="500.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurs.ControlleurGabarit">
    <children>
       <AnchorPane prefHeight="19.0" prefWidth="640.0" styleClass="barre-menu">
          <children>
-            <Separator layoutY="27.0" prefHeight="0.0" prefWidth="658.0" styleClass="separateur-menu" />
-            <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="629.0" layoutY="4.0" onMouseClicked="#pageFermer" pickOnBounds="true" preserveRatio="true">
+            <Separator layoutY="28.0" prefHeight="2.0" prefWidth="800.0" styleClass="separateur-menu" />
+            <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="771.0" layoutY="4.0" onMouseClicked="#pageFermer" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../medias/quitter.png" />
                </image>
@@ -21,12 +21,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fx:id="btnClose" fitHeight="30.0" fitWidth="25.0" layoutX="602.0" layoutY="4.0" onMouseClicked="#pageReduire" pickOnBounds="true" preserveRatio="true" styleClass="img-fermer">
+            <ImageView fx:id="btnClose" fitHeight="30.0" fitWidth="25.0" layoutX="740.0" layoutY="4.0" onMouseClicked="#pageReduire" pickOnBounds="true" preserveRatio="true" styleClass="img-fermer">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="4.0" layoutY="3.0" onMouseClicked="#pageHome" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="2.0" layoutY="3.0" onMouseClicked="#pageHome" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../medias/maison.png" />
                </image>
@@ -34,7 +34,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="34.0" layoutY="3.0" onMouseClicked="#pageInfos" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="35.0" layoutY="3.0" onMouseClicked="#pageInfos" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../medias/infos.png" />
                </image>

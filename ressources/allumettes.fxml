@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="640.0" style="-fx-background-color: #25221e;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurs.ControlleurAllumettes">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="800.0" style="-fx-background-color: #25221e;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurs.ControlleurAllumettes">
   <children>
       <BorderPane prefHeight="605.0" prefWidth="659.0" styleClass="background">
          <bottom>
@@ -32,94 +32,97 @@
             </Label>
          </bottom>
          <center>
-            <AnchorPane prefHeight="101.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="379.0" prefWidth="800.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fx:id="allumette15" fitHeight="150.0" fitWidth="77.0" layoutX="27.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette15" fitHeight="216.0" fitWidth="49.0" layoutX="33.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette14" fitHeight="150.0" fitWidth="77.0" layoutX="67.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette14" fitHeight="216.0" fitWidth="49.0" layoutX="82.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette13" fitHeight="150.0" fitWidth="77.0" layoutX="106.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette13" fitHeight="216.0" fitWidth="49.0" layoutX="131.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette12" fitHeight="150.0" fitWidth="77.0" layoutX="145.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette12" fitHeight="216.0" fitWidth="49.0" layoutX="180.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette11" fitHeight="150.0" fitWidth="77.0" layoutX="184.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette11" fitHeight="216.0" fitWidth="49.0" layoutX="229.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette10" fitHeight="150.0" fitWidth="77.0" layoutX="223.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette10" fitHeight="216.0" fitWidth="49.0" layoutX="278.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette9" fitHeight="150.0" fitWidth="77.0" layoutX="262.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette9" fitHeight="216.0" fitWidth="49.0" layoutX="327.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette8" fitHeight="150.0" fitWidth="77.0" layoutX="301.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette8" fitHeight="216.0" fitWidth="49.0" layoutX="376.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette7" fitHeight="150.0" fitWidth="77.0" layoutX="340.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette7" fitHeight="216.0" fitWidth="49.0" layoutX="425.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette6" fitHeight="150.0" fitWidth="77.0" layoutX="379.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette6" fitHeight="216.0" fitWidth="49.0" layoutX="474.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette5" fitHeight="150.0" fitWidth="77.0" layoutX="418.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette5" fitHeight="216.0" fitWidth="49.0" layoutX="523.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette4" fitHeight="150.0" fitWidth="77.0" layoutX="457.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette4" fitHeight="216.0" fitWidth="49.0" layoutX="572.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette3" fitHeight="150.0" fitWidth="77.0" layoutX="496.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette3" fitHeight="216.0" fitWidth="49.0" layoutX="621.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette2" fitHeight="150.0" fitWidth="77.0" layoutX="535.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette2" fitHeight="216.0" fitWidth="49.0" layoutX="670.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="allumette1" fitHeight="150.0" fitWidth="77.0" layoutX="574.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="allumette1" fitHeight="216.0" fitWidth="49.0" layoutX="719.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../medias/allumette.png" />
                      </image>
                   </ImageView>
+                  <Line endX="221.0" layoutX="398.0" layoutY="14.0" startX="-218.0" styleClass="barre-menu" />
                </children>
             </AnchorPane>
          </center>
          <top>
-            <AnchorPane prefHeight="89.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="112.0" prefWidth="800.0" BorderPane.alignment="CENTER">
                <children>
-                  <Text fx:id="lbl_tour" fill="WHITE" layoutX="104.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lbl-about-titres" text="--- Commencer une partie ---" textAlignment="CENTER" wrappingWidth="435.15283203125" />
-                  <Button fx:id="btn_moins1" layoutX="104.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#moins_1" text="Prendre 1 allumette" />
-                  <Button fx:id="btn_moins2" layoutX="257.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#moins_2" text="Prendre 2 allumettes" />
-                  <Button fx:id="btn_moins3" layoutX="414.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#moins_3" text="Prendre 3 allumettes" />
-                  <Line endX="221.0" layoutX="320.0" layoutY="87.0" startX="-218.0" styleClass="barre-menu" />
+                  <Text fx:id="lbl_tour" fill="WHITE" layoutX="182.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--- Commencer une partie ---" textAlignment="CENTER" wrappingWidth="435.15283203125">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font></Text>
+                  <Button fx:id="btn_moins1" layoutX="180.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#moins_1" text="Prendre 1 allumette" />
+                  <Button fx:id="btn_moins2" layoutX="337.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#moins_2" text="Prendre 2 allumettes" />
+                  <Button fx:id="btn_moins3" layoutX="494.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#moins_3" text="Prendre 3 allumettes" />
                </children>
             </AnchorPane>
          </top>
