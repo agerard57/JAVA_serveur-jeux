@@ -10,9 +10,10 @@ public class ImplAllumettes extends UnicastRemoteObject implements InterfaceAllu
 	private ArrayList<Integer> idJoueur1;
 	private ArrayList<Integer> idJoueur2;
 	private ArrayList<Integer> nbAllumettes;
-	private int idJeu;
 	private ArrayList<Boolean> enAttente;
 	
+	private int idJeu;
+
 	public ImplAllumettes() throws RemoteException {
 		super();
 		idJeu = 0;
@@ -28,7 +29,7 @@ public class ImplAllumettes extends UnicastRemoteObject implements InterfaceAllu
 		return nbAllumettes.get(idPartie);
 	}
 	
-	public boolean tourDe(int id, int idPartie) throws RemoteException {
+	public boolean tourDe(int id, int idPartie) throws RemoteException { //Fonction qui vérifie qui peut jouer
 		if(tourDe.get(idPartie)%2 == 1){
 			return (id == idJoueur1.get(idPartie));
 		}else{
@@ -36,13 +37,13 @@ public class ImplAllumettes extends UnicastRemoteObject implements InterfaceAllu
 		}
 	}
 	
-	public void retirerAllumette(int nbAl, int idPartie) throws RemoteException{
-		nbAllumettes.set(idPartie,(nbAllumettes.get(idPartie) - nbAl));
-		tourDe.set(idPartie, (tourDe.get(idPartie) + 1));
+	public void retirerAllumette(int nbAl, int idPartie) throws RemoteException{ //Fonction afin de retirer une/des allumette(s)
+		nbAllumettes.set(idPartie,(nbAllumettes.get(idPartie) - nbAl)); //Definit le nouveau nombre d'allumettes 
+		tourDe.set(idPartie, (tourDe.get(idPartie) + 1)); //Change le tour 
 		synchronized(this){
 			this.notifyAll();
 		}
-
+//Possible erreur ici
 		synchronized(this){
 			try {
 				this.wait();
@@ -54,7 +55,7 @@ public class ImplAllumettes extends UnicastRemoteObject implements InterfaceAllu
 	}
 	
 	public boolean Fin(int idPartie) throws RemoteException {
-		return (nbAllumettes.get(idPartie) == 0);
+		return (nbAllumettes.get(idPartie) == 0); //Fonction vérifiant si il reste des allumettes
 	}
 	
 	public int Gagnant(int idPartie) throws RemoteException {
@@ -62,27 +63,26 @@ public class ImplAllumettes extends UnicastRemoteObject implements InterfaceAllu
 	}
 
 	public int[] rejoindrePartie() throws RemoteException {
-		if(enAttente.get(idJeu)){
+		if(enAttente.get(idJeu)){ //Si le jeu trouve un deuxième joueur...
 			int[] info = {idJeu, 2};
-			enAttente.set(idJeu, false);
+			enAttente.set(idJeu, false); //...On désactive l'état d'attente
 			synchronized(this){
-				this.notifyAll();
+				this.notifyAll(); //On envoi l'information à tous les joueurs
 				try {
 					this.wait();
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 			return info;
 		}else{
-			if(idJeu != 0){
+			if(idJeu != 0){ //Quand le jeu est "en marche"
 				idJeu++;
 			}
-			tourDe.add(1);
-			idJoueur1.add(1);
-			idJoueur2.add(2);
-			nbAllumettes.add(13);
+			tourDe.add(1); //Ajout de l'état "tour du joueur 1"
+			idJoueur1.add(1); //Ajout du joueur 1
+			idJoueur2.add(2); //Ajout du joueur 2
+			nbAllumettes.add(15); //Ajout des allumettes
 			int[] info = {idJeu, 1};
 			if(idJeu == 0){
 				enAttente.set(0, true);
@@ -93,18 +93,15 @@ public class ImplAllumettes extends UnicastRemoteObject implements InterfaceAllu
 				try {
 					this.wait();
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 			return info;
-			
 		}
-		
 	}
 
-	public boolean enAttente(int idP) throws RemoteException {
-		return enAttente.get(idP);
+	public boolean enAttente(int idPart) throws RemoteException {
+		return enAttente.get(idPart);
 	}
 
 }

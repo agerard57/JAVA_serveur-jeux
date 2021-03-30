@@ -7,16 +7,22 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.fxml.Initializable;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import serveur.InterfaceAllumettes;
 
 public class ControlleurAllumettes implements Initializable {
 
+	
+	
+//-----------------------DECLARATIONS--------------------------	
+	
+	
+	
     @FXML
     private Label lblAllumettes;
 
@@ -80,49 +86,52 @@ public class ControlleurAllumettes implements Initializable {
     @FXML
     private Button btn_moins3;
     
-	ArrayList<ImageView> listAllu;
+	ArrayList<ImageView> listeAllu;
 	private int idJoueur;
 	private int idPartie;
-	private int choix;
-	private int nbAllumettes;
 	InterfaceAllumettes jeu;
+	
+	
+	
+//--------------------------ITEMS------------------------------
+
 	
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		listAllu = new ArrayList<ImageView>();
-		listAllu.add(allumette1);
-		listAllu.add(allumette2);
-		listAllu.add(allumette3);
-		listAllu.add(allumette4);
-		listAllu.add(allumette5);
+		
+		listeAllu = new ArrayList<ImageView>();
 
-		listAllu.add(allumette6);
-		listAllu.add(allumette7);
-		listAllu.add(allumette8);
-		listAllu.add(allumette9);
-		listAllu.add(allumette10);
+		//ajout des allumettes dans l'ArrayList "listeAllu"
+		listeAllu.add(allumette1);
+		listeAllu.add(allumette2);
+		listeAllu.add(allumette3);
+		listeAllu.add(allumette4);
+		listeAllu.add(allumette5);
+		listeAllu.add(allumette6);
+		listeAllu.add(allumette7);
+		listeAllu.add(allumette8);
+		listeAllu.add(allumette9);
+		listeAllu.add(allumette10);
+		listeAllu.add(allumette11);
+		listeAllu.add(allumette12);
+		listeAllu.add(allumette13);
+		listeAllu.add(allumette14);
+		listeAllu.add(allumette15);
 
-		listAllu.add(allumette11);
-		listAllu.add(allumette12);
-		listAllu.add(allumette13);
-		listAllu.add(allumette14);
-		listAllu.add(allumette15);
-
-		nbAllumettes = 15;
 
 		try {
-			   int port = 8000;
-			   jeu = (InterfaceAllumettes) Naming.lookup("rmi://localhost:8000/allumettes");
-			   System.out.println("En attente d'un adversaire...");
+			   int port = 8001; 
+			   jeu = (InterfaceAllumettes) Naming.lookup("rmi://localhost:8001/allumettes"); //Recherche du serveur
+			   System.out.println("En attente d'un adversaire..."); //Message d'attente
 
 			   int []info = jeu.rejoindrePartie();
 
-				idPartie = info[0];
-				idJoueur = info[1];
+				idPartie = info[0]; // Initialisation de la partie
+				idJoueur = info[1]; // Initialisation de l'id du joueur
 
 				lbl_tour.setText("A votre tour");
-				griserButtons(false);
+				griserButtons(false); // Active les boutons
 
 		} catch (Exception e) {
 			   System.out.println("Client exception: " + e);
@@ -130,98 +139,110 @@ public class ControlleurAllumettes implements Initializable {
 
 	}
 	
+	public void griserButtons(boolean b){ //Fonction frisant tout les boutons
+		btn_moins1.setDisable(b); //Griser le bouton 1
+		btn_moins2.setDisable(b); //Griser le bouton 2
+		btn_moins3.setDisable(b); //Griser le bouton 3
+	}
+	
     @FXML
-    void moins_1(MouseEvent event) {
+    void moins_1(ActionEvent event) { //Fonction de retrait d'une allumette
     	try {
-    		griserButtons(true);
-			jeu.retirerAllumette(1, idPartie);
-			majNbAllumettes();
-			griserButtons(false);
+    		
+			jeu.retirerAllumette(1, idPartie); //On passe 1 en variable
+			majNbAllumettes(1);
+
+			
 		} catch (RemoteException e) {
+			
+			e.printStackTrace();
+			
+		}
+    }
+
+    @FXML
+    void moins_2(ActionEvent event) { //Fonction de retrait de deux allumettes
+		try {
+			
+			jeu.retirerAllumette(2, idPartie); //On passe 2 en variable
+			majNbAllumettes(2);
+
+			
+		} catch (RemoteException e) {
+			
 			e.printStackTrace();
 		}
     }
 
     @FXML
-    void moins_2(MouseEvent event) {
+    void moins_3(ActionEvent event) { //Fonction de retrait de trois allumettes
 		try {
+		
+			jeu.retirerAllumette(3, idPartie); //On passe 3 en variable
+			majNbAllumettes(3);
 
-			majAffichage(nbAllumettes);
-			jeu.retirerAllumette(2, idPartie);
+			
 		} catch (RemoteException e) {
+			
 			e.printStackTrace();
-		}
-    }
-
-    @FXML
-    void moins_3(MouseEvent event) {
-		try {
-			griserButtons(true);
-			jeu.retirerAllumette(3, idPartie);
-			majNbAllumettes();
-			griserButtons(false);
-		} catch (RemoteException e) {
-			e.printStackTrace();
+			
 		}
     }
     
-    public void majNbAllumettes() {
-		int nbAlu;
+    public void majNbAllumettes(int nbmoins) { //Mise-à-jour de la visibilité des allumettes sur l'écran
+		int nbAllu;
 		try {
-			nbAlu = jeu.nbAllumettes(idPartie);
+			nbAllu = jeu.nbAllumettes(idPartie);
 
-			for(int i = 1; i <= nbAlu; i++) {
-				listAllu.get(i-1).setVisible(true);
+			for(int i = 1; i <= nbAllu; i++) {	//Boucle rendant visible toutes les autres allumettes
+				listeAllu.get(i-nbmoins).setVisible(true);
 			}
-			for(int i = nbAlu; i <= 13; i++) {
-				listAllu.get(i-1).setVisible(false);
+			
+			for(int i = nbAllu; i <= 15; i++) { //Boucle enlevant aux 15 allumettes 
+				listeAllu.get(i-nbmoins).setVisible(false);
 			}
 
-			if(nbAlu <= 0) {
+			if(nbAllu <= 0) { //Si il n'a plus d'allumettes
 
-				if(jeu.tourDe(idJoueur, idPartie)){
-					lbl_tour.setText("Vous avez gagné !");
-				}else{
-					lbl_tour.setText("Vous avez perdu !");
+				if(jeu.tourDe(idJoueur, idPartie)){ //On vérifie qui à gagné
+					lbl_tour.setText("Vous avez gagné !"); //J1 gagne
+				}else
+				{
+					lbl_tour.setText("Vous avez perdu !"); //J2 gagne
 				}
 
-			}else {
+			}else{
 				nouveauTour();
 			}
 
-			if(nbAlu < 3) {
-				btn_moins3.setDisable(true);
+			if(nbAllu < 1) {
+				
+				btn_moins1.setDisable(true); //On grise le bouton si il reste moins d'une allumette
+				
 			}
-			if(nbAlu < 2) {
-				btn_moins2.setDisable(true);
+			if(nbAllu < 2) {
+				
+				btn_moins2.setDisable(true); //On grise le bouton si il reste moins de deux allumettes
+				
 			}
-			if(nbAlu < 1) {
-				btn_moins1.setDisable(true);
+			if(nbAllu < 3) {
+				
+				btn_moins3.setDisable(true); //On grise le bouton si il reste moins de trois allumettes
+				
 			}
 
 		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
+			
 		}
 
 	}
-
+	
 	public void nouveauTour() {
 
 	}
 
-	public void majAffichage(int nbAlu){
-		for(int i = 1; i <= nbAlu; i++) {
-			listAllu.get(i-1).setVisible(true);
-		}
-		for(int i = nbAlu; i <= 13; i++) {
-			listAllu.get(i-1).setVisible(false);
-		}
-	}
-	
-	public void griserButtons(boolean b){
-		btn_moins1.setDisable(b);
-		btn_moins2.setDisable(b);
-		btn_moins3.setDisable(b);
-	}
+
+
 }

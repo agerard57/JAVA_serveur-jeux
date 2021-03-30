@@ -120,9 +120,9 @@
                      <font>
                         <Font name="System Bold" size="23.0" />
                      </font></Text>
-                  <Button fx:id="btn_moins1" layoutX="180.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#moins_1" text="Prendre 1 allumette" />
-                  <Button fx:id="btn_moins2" layoutX="337.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#moins_2" text="Prendre 2 allumettes" />
-                  <Button fx:id="btn_moins3" layoutX="494.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#moins_3" text="Prendre 3 allumettes" />
+                  <Button fx:id="btn_moins1" layoutX="180.0" layoutY="73.0" mnemonicParsing="false" onAction="#moins_1" text="Prendre 1 allumette" />
+                  <Button fx:id="btn_moins2" layoutX="337.0" layoutY="73.0" mnemonicParsing="false" onAction="#moins_2" text="Prendre 2 allumettes" />
+                  <Button fx:id="btn_moins3" layoutX="494.0" layoutY="73.0" mnemonicParsing="false" onAction="#moins_3" text="Prendre 3 allumettes" />
                </children>
             </AnchorPane>
          </top>

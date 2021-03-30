@@ -4,6 +4,9 @@ ___
 
 ## Changelog
 
+V.03.30.15:
+- Commentaires ajoutés pour les allumettes, partie finalement non-terminé pour manque de temps
+
 V.03.29.15:
 - Encore refait les pages fxml avec scene-builder
 

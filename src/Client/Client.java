@@ -14,34 +14,34 @@ import javafx.stage.StageStyle;
 
 public class Client extends Application{
 	
-    private double xOffset = 0;
-    private double yOffset = 0;
+    private double xPos = 0;
+    private double yPos = 0; //Initialisation de la position X et Y de la fenêtre
     
 	 @Override
 	    public void start(final Stage primaryStage) throws IOException {
-	        primaryStage.initStyle(StageStyle.UNDECORATED);
-	        primaryStage.setTitle("Serveur de Jeux");
-	        primaryStage.getIcons().add(new Image("file:medias/jeux.png"));
+	        primaryStage.initStyle(StageStyle.UNDECORATED); //Enlève la barre supérieure de la fenêtre
+	        primaryStage.setTitle("Serveur de Jeux"); //Titre de l'application
+	        primaryStage.getIcons().add(new Image("file:medias/jeux.png")); //Image représentant l'application
 
-			Parent root = FXMLLoader.load(this.getClass().getResource("/gabarit.fxml"));
+			Parent root = FXMLLoader.load(this.getClass().getResource("/gabarit.fxml")); //Chargement du gabarit
 
-
-	        root.setOnMousePressed(new EventHandler<MouseEvent>() {
+			//Fonction "clique sur la fenêtre"
+	        root.setOnMousePressed(new EventHandler<MouseEvent>() { 
 	            @Override
 	            public void handle(MouseEvent event) {
-	                xOffset = event.getSceneX();
-	                yOffset = event.getSceneY();
+	                xPos = event.getSceneX();
+	                yPos = event.getSceneY();
 	            }
 	        });
-	        root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+	        root.setOnMouseDragged(new EventHandler<MouseEvent>() { 
 	            @Override
 	            public void handle(MouseEvent event) {
-	                primaryStage.setX(event.getScreenX() - xOffset);
-	                primaryStage.setY(event.getScreenY() - yOffset);
+	                primaryStage.setX(event.getScreenX() - xPos);
+	                primaryStage.setY(event.getScreenY() - yPos);
 	            }
 	        });
 
-	        Scene scene = new Scene(root, 800, 500);
+	        Scene scene = new Scene(root, 800, 500); //Taille de la fenêtre
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
 	        
